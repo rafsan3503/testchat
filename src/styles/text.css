@@ -1,0 +1,66 @@
+/* -------------------
+custom_-_variables
+------------------ */
+:root {
+    /* -------- neutral -------- */
+    --t50: #E9E9E9;
+    --t75: #BEBEC0;
+    --t100: #7F7F81;
+    --t200: #48484A;
+    --t300: #161718;
+}
+
+
+
+
+
+
+/* colors */
+/* _-_texts_-_ */
+.t50_c {
+    color: var(--t50);
+}
+.t75_c {
+    color: var(--t75);
+}
+.t100_c {
+    color: var(--t100);
+}
+.t200_c {
+    color: var(--t200);
+}
+.t300_c {
+    color: var(--t300);
+}
+/* _-_defaults_-_ */
+.d-black_c {
+    color: var(--d-black);
+}
+.d-white_c {
+    color: var(--d-white);
+}
+.d-body-color_c {
+    color: var(--d-body);
+}
+/* _-_primaries_-_ */
+.p50_c {
+    color: var(--p50);
+}
+.p200_c {
+    color: var(--p200);
+}
+.p300_c {
+    color: var(--p300);
+}
+/* _-_neutrals_-_ */
+.n300_c {
+    color: var(--n300);
+}
+
+.cornsilk_c {
+    color: cornsilk;
+}
+
+.text-align-center {
+    text-align: center;
+}

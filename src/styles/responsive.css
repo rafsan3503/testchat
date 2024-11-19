@@ -1,0 +1,23 @@
+
+
+
+@media (max-width: 1100px) {
+    .smaller-width-box {
+        flex: none;
+        max-width: 99.5%;
+    }
+    .home-cont {
+        padding: 17px 5px;
+    }
+    .online-users-text {
+        left: 5px;
+    }
+    
+}
+
+@media (max-width: 570px) {
+    .user-info-box {
+        bottom: 1px;
+        width: 100%;
+    }   
+}

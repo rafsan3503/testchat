@@ -1,0 +1,74 @@
+
+
+
+
+.effect-wrap .effect {
+    position: absolute;
+    z-index: -1;
+}
+
+.effect-wrap .effect {
+    position: absolute;
+}
+
+
+.tk-effect-1 {
+    left: 2%;
+    top: 25%;
+    animation: spin 10s linear infinite;
+}
+.tk-effect-1 img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.tk-effect-2 {
+    right: 2%;
+    bottom: 3%;
+    animation: shakeScale 10s linear infinite;
+}
+.tk-effect-2 img {
+    width: 100px;
+}
+
+@media (max-width: 800px) {
+    .tk-effect-1 {
+        left: 30px;
+        top: 40px;
+        animation: spin 10s linear infinite;
+    }
+    .tk-effect-1 img {
+        width: 60px;
+        border-radius: 50%;
+    }
+    
+    .tk-effect-2 {
+        right: 10px;
+        bottom: 0;
+        animation: shakeScale 10s linear infinite;
+    }
+    .tk-effect-2 img {
+        width: 70px;
+    }
+}
+
+@media (max-width: 500px) {
+    .tk-effect-1 {
+        left: 10px;
+        top: 30px;
+        animation: spin 10s linear infinite;
+    }
+    .tk-effect-1 img {
+        width: 50px;
+        border-radius: 50%;
+    }
+    
+    .tk-effect-2 {
+        right: 10px;
+        bottom: 0;
+        animation: shakeScale 10s linear infinite;
+    }
+    .tk-effect-2 img {
+        width: 60px;
+    }
+}

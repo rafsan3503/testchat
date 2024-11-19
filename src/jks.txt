@@ -1,0 +1,1105 @@
+
+
+import angle_down from './../media/icons/angle_down.png'
+import eth_icon_one from './../media/icons/eth-icon-one.png'
+import eth_icon_two from './../media/icons/eth-icon-two.png'
+// import bsc_icon from './../media/icons/bsc-icon.svg'
+import usdt_icon from './../media/icons/usdt-icon.png'
+import swap_icon from './../media/icons/swap-icon.png'
+
+
+
+
+const Bridge = () => {
+    return ( 
+        <div className="bridge-page">
+            
+            <div className="flex row justify-space-between mgb-20">
+                <h2 className="t50_c">Bridge</h2>
+                <a className="btn-1">DEMO</a>
+            </div>
+
+            <div className="bridge-input-container mgb-20">
+                <div className="flex row justify-space-between mgb-20">
+                    <p className="label t75_c">From</p>
+                    <p className="label t75_c">Balance:</p>
+                </div>
+
+                <div className="flex row inputs-box">
+                    <div className="flex-50 amount-input-box">
+                        <input type="number" placeholder="0.0" />
+                    </div>
+
+                    <div className="flex-50 flex row justify-space-between">
+                        <div className="select-box flex row align-center justify-space-between">
+                            <div className="flex row gap-8 align-center">
+                                <div className="select-icon-box flex row justify-center align-center">
+                                    <img src={usdt_icon} width={40} alt="" />
+                                </div>
+                                <div>
+                                    <p className="select-ticker">USDT</p>
+                                    <p className="select-name">USDCoin</p>
+                                </div>
+                            </div>
+                            <div className="select-angle-box flex row justify-center align-center">
+                                <img src={angle_down} className='' alt="" />
+                            </div>
+                        </div>
+
+                        <div className="select-box flex row align-center justify-space-between">
+                            <div className="flex row gap-8 align-center">
+                                <div className="select-icon-box flex row justify-center align-center">
+                                    <img src={eth_icon_one} alt="" />
+                                </div>
+                                <div>
+                                    <p className="select-ticker">ETH</p>
+                                    <p className="select-name">Mainnet</p>
+                                </div>
+                            </div>
+                            <div className="select-angle-box flex row justify-center align-center">
+                                <img src={angle_down} className='' alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex justify-center mgb-20">
+                <div className="swap-icon-box flex justify-center align-center">
+                    <img src={swap_icon} alt="" />
+                </div>
+            </div>
+
+            <div className="bridge-input-container mgb-20">
+                <div className="flex row justify-space-between mgb-20">
+                    <p className="label t75_c">To</p>
+                    <p className="label t75_c">Balance:</p>
+                </div>
+
+                <div className="flex row inputs-box">
+                    <div className="flex-50 amount-input-box">
+                        <input type="number" placeholder="0.0" />
+                    </div>
+
+                    <div className="flex-50 flex row justify-space-between">
+                        <div className="select-box flex row align-center justify-space-between">
+                            <div className="flex row gap-8 align-center">
+                                <div className="select-icon-box flex row justify-center align-center">
+                                    {/* <img src={usdt_icon} width={40} alt="" /> */}
+                                </div>
+                                <div>
+                                    <p className="select-ticker">TIC</p>
+                                    <p className="select-name">Coiname</p>
+                                </div>
+                            </div>
+                            <div className="select-angle-box flex row justify-center align-center">
+                                <img src={angle_down} className='' alt="" />
+                            </div>
+                        </div>
+
+                        <div className="select-box flex row align-center justify-space-between">
+                            <div className="flex row gap-8 align-center">
+                                <div className="select-icon-box flex row justify-center align-center">
+                                    <img src={eth_icon_one} alt="" />
+                                </div>
+                                <div>
+                                    <p className="select-ticker">ETH</p>
+                                    <p className="select-name">Mainnet</p>
+                                </div>
+                            </div>
+                            <div className="select-angle-box flex row justify-center align-center">
+                                <img src={angle_down} className='' alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex justify-center">
+                <div className="bridge-btn flex justify-center align-center">
+                    <p>Bridge</p>
+                </div>
+            </div>
+
+        </div>
+    );
+}
+ 
+export default Bridge;
+
+
+
+
+// const getUSDCBalance = async (web3, account) => {
+    //     if (!web3 || !account) return null;
+    //     try {
+    //         // Create a contract instance for the USDC token
+    //         const usdcContract = new web3.eth.Contract(USDC_ABI, USDC_ADDRESS);
+    //         // Call the balanceOf function on the USDC contract to get the balance of the user's account
+    //         const balance = await usdcContract.methods.balanceOf(account).call();
+    //         // Convert balance from wei to USDC (assuming 6 decimal places)
+    //         return web3.utils.fromWei(balance, 'ether');
+    //     } catch (error) {
+    //         console.error('Error fetching USDC balance:', error);
+    //         setToastMsg('Error fetching USDC balance')
+    //         setToaststatus(false)
+    //         setTimeout(() => {
+    //             setToastMsg(null)
+    //         }, 5000)
+    //         return null;
+    //     }
+    // };
+    // const getUSDCBalance = async (web3, account) => {
+    //     if (!web3 || !account) return null;
+    //     try {
+    //       // Create a contract instance for the USDC token
+    //       const usdcContract = new web3.eth.Contract(USDC_ABI, USDC_ADDRESS);
+    //       if (!usdcContract.methods || !usdcContract.methods.balanceOf) {
+    //         throw new Error('balanceOf method not found in USDC contract');
+    //       }
+    //       // Call the balanceOf function on the USDC contract to get the balance of the user's account
+    //       const balance = await usdcContract.methods.balanceOf(account).call();
+    //       // Convert balance from wei to USDC (assuming 6 decimal places)
+    //       return web3.utils.fromWei(balance, 'ether');
+    //     } catch (error) {
+    //       console.error('Error fetching USDC balance:', error);
+    //       return null;
+    //     }
+    //   };
+
+
+onClick={handleFromSelect}
+
+
+// const chainIdBigInt = BigInt('0x' + chainIdHex); // Convert hexadecimal string to BigInt
+                // const chainIdBigInt = BigInt(parseInt(chainIdHex, 16))
+                // console.log(chainIdBigInt)
+                // setFromNetwork(chainIdBigInt);
+                // setChainValue(demochains.find(network => network.chainId === chainIdBigInt.toString()))
+
+                // const usdcBalance = await getUSDCBalance(web3Instance, accounts[0]); // Assuming first account is used
+
+
+
+        const handleSwitchFromNetwork = async (network) => {
+        try {
+            await window.ethereum.request({
+              method: 'wallet_switchEthereumChain',
+              params: [{ chainId: network.chainId }],
+            });
+            // setSelectedNetwork(network);
+            setChainValue(network) 
+            setChainModal(null)
+        } catch (error) {
+            console.error('Error switching network:', error);
+        }
+    }
+
+{selectStatus === 'From' ? <div className="">
+                    {demochains.map((chain) => (
+                        <div className={`modal-chain ${chainValue ? chainValue.name === chain.name ? 'active' : '' : ''}`} key={chain.chainId} 
+                            onClick={() => handleSwitchFromNetwork(chain) }
+                        >
+                            <p>{chain.name}</p>
+                        </div>
+                    ))}
+                </div> : null}
+
+
+try {
+            await window.ethereum.request({
+              method: 'wallet_switchEthereumChain',
+              params: [{ chainId: network.chainId }],
+            });
+            // setSelectedNetwork(network);
+            setChainToValue(network) 
+            setChainModal(null)
+        } catch (error) {
+            console.error('Error switching network:', error);
+        }
+
+
+ const handleFromSelect = () => {
+        setSelectstatus('From')
+        setChainModal(true)
+    }
+
+
+const handleToSelect = () => {
+        setSelectstatus('To')
+        setChainModal(true)
+    }
+
+
+ // Function to get USDC balance
+    // const getUSDCBalance = async (web3, account) => {
+    //     if (!web3 || !account) return null;
+    //     try {
+    //         // Call the balanceOf function directly on the contract address
+    //         const balance = await web3.eth.call({
+    //             to: USDC_ADDRESS,
+    //             data: web3.utils.sha3('balanceOf(address)').substr(0, 10) + web3.eth.abi.encodeParameter('address', account).substr(2)
+    //         });
+    //         // Convert balance from hex to decimal
+    //         return web3.utils.hexToNumberString(balance);
+    //     } catch (error) {
+    //         console.error('Error fetching USDC balance:', error);
+    //         setToastMsg('Error fetching USDC balance')
+    //         setToaststatus(false)
+    //         setTimeout(() => {
+    //             setToastMsg(null)
+    //         }, 5000)
+    //         return null;
+    //     }
+    //   };
+    
+
+
+// check which network user is connected to
+    // useEffect(() => {
+    //     const getConnectedNetwork = async () => {
+    //         if (window.ethereum) {
+    //           const web3 = new Web3(window.ethereum);
+    //           try {
+    //             // Request accounts to ensure connection
+    //             const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+    //             const chainId = await web3.eth.getChainId();
+    //             // setFromNetwork(chainId);
+    //             // const xchain = demochains.find(network => network.chainId === chainId)
+    //             const xchain = demochains.filter(e => e.chainId === chainId)
+    //             console.log(xchain)
+    //             setChainValue(demochains.find(network => network.chainId === chainId));
+    //           } catch (error) {
+    //             console.error('Error fetching network information:', error);
+    //           }
+    //         } else {
+    //           console.error('MetaMask extension not detected');
+    //         }
+    //       };
+      
+    //     getConnectedNetwork();
+    // }, [accounts])
+
+
+    // useEffect(() => {
+    //     setChainValue(demochains[0])
+    //     setChainToValue(demochains[1])
+    // }, [])
+
+const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
+        const wallet = new ethers.Wallet(privateKey, provider);
+
+const contract = new ethers.Contract(address, abi, wallet);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{windowWidth < 870 ? <p className="label t75_c">Balance: {usdcBalance ? usdcBalance : 'connect wallet to see balance'}</p> : null}
+
+
+
+
+
+
+// get balance using metamask
+    useEffect(() => {
+        const getUSDCBalance = async (web3, account) => {
+            if (!web3 || !account || !chainValueId) return null;
+            try {
+                const item = demochains.find(e => e.chainIdNum === chainValueId)
+                if(!item) {
+                    console.log('unsupported')
+                    setToastMsg('Unsupported network')
+                    setToaststatus(false)
+                    setTimeout(() => {
+                        setToastMsg(null)
+                    }, 5000)
+                    return null;
+                }
+                // Call the balanceOf function directly on the contract address
+                const balance = await web3.eth.call({
+                    to: item.address,
+                    data: web3.utils.sha3('balanceOf(address)').substr(0, 10) + web3.eth.abi.encodeParameter('address', account).substr(2)
+                });
+                console.log(web3.utils.hexToNumberString(balance))
+                // Convert balance from hex to decimal
+                // return web3.utils.hexToNumberString(balance);
+                setRICHBalance(web3.utils.hexToNumberString(balance))
+            } catch (error) {
+                console.error('Error fetching USDC balance:', error);
+                setToastMsg('Error fetching USDC balance')
+                setToaststatus(false)
+                setTimeout(() => {
+                    setToastMsg(null)
+                }, 5000)
+                return null;
+            }
+          };
+
+        getUSDCBalance(web3, accounts[0])
+    }, [chainValueId, web3, accounts[0]])
+
+
+// connect wallet using metamask
+    const handleWalletConnect = async () => {
+        if (window.ethereum) {
+            const web3Instance = new Web3(window.ethereum);
+            setWeb3(web3Instance);
+            try {
+                // Request account access
+                await window.ethereum.request({ method: 'eth_requestAccounts' });
+                // Get the user's accounts
+                const accounts = await web3Instance.eth.getAccounts();
+                setAccounts(accounts);
+                setToastMsg('Connected successfully')
+                setToaststatus(true)
+                setTimeout(() => {
+                    setToastMsg(null)
+                }, 5000)
+
+                const chainIdHex = await web3Instance.eth.getChainId();
+                console.log(Number(chainIdHex))
+                setChainValueId(Number(chainIdHex))
+                setChainValue(demochains.find(e => e.chainIdNum === Number(chainIdHex)))
+            } catch (error) {
+                console.error(error);
+                setToastMsg(error.message)
+                setToaststatus(false)
+                setTimeout(() => {
+                    setToastMsg(null)
+                }, 5000)
+            }
+        } else {
+            console.error('Web3 not found. Please install MetaMask or another Web3 wallet.');
+        }
+    }
+
+
+
+
+<div className="main-frame">
+                    <div className="flex about-top row">
+                        <div className="about-top-text-1 flex row">
+                            <img src={logo_single} alt="" />
+                            <p>
+                                How does<br />
+                                PEKI INU work?
+                            </p>
+                        </div>
+
+                        <div className="about-top-text-2">
+                            <p>
+                                PEKI INU is built for peer-to-peer coordination, shared ownership and the formation of communities around physical
+                                and digital property.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex row about-bottom">
+                        <div className="about-bottom-img">
+                            <img src={logo_bg} alt="" />
+                        </div>
+                        <div className="about-bottom-details flex row justify-space-between">
+                            <div className="details-text-box">
+                                {htws.map((htw, index) => (
+                                    <div className={`details-text-box-inner ${htwCount === index ? 'active' : ''}`} key={htw.id}>
+                                        <h2>0{index+1}</h2>
+                                        <h3>{htw.title}</h3>
+                                        <p>{htw.body[0]}</p>
+                                        {htw.body.length > 1 ? <p>{htw.body[1]}</p> : null}
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="details-rec-box" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                                {htws.map((htw, index) => (
+                                    <div 
+                                        className="det-rec"
+                                        style={{ height: 100/htws.length+'%' }} key={htw.id} 
+                                        onClick={() => {
+                                            setHtwcount(index)
+                                        }}
+                                    >
+                                        <div className={`det-rec-inner ${htwCount === index ? 'active' : ''}`}></div>    
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+
+
+
+A large part of what he'll be creating are terminal commands.
+
+These "slash commands" are used to interact directly with the game terminal, not prompting any ai.
+
+Examples: 
+/balance — Checks user's wallet balance.
+/visit <agency_name> — Visit the room of an agency. (No privileges)
+/create agency <agency_name> — Creates a new agency.
+/create user <username> — Creates a new user account.
+/setaddress <public_address> — Verifies and sets the user's primary wallet address. (Prompts wallet signing)
+/hire <ai_name> <price> — Hires a specific AI Agent, (if not occupied) which spins up a new instance of a selected AI model.
+/join <agency_name> — Attempts to join an agency. (Must have NFT pass in wallet)
+/quit <agency_name> — Leaves a joined agency.
+/info <agency_name> — Get info on an agency. (Description, vault balance, members)
+
+——————————————
+
+Terminal should send "server messages" to the player that no one else can see:
+For example, If its a paid agency that someone's trying to visit, but they don't have access: 
+"This room is paid, and you don't have access. Contact the owner @<ownername> or buy access on secondary."
+
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyANYwkXmh2SqzPf2cZUF0Ne3L8CjHG1E-o",
+  authDomain: "quasarid.firebaseapp.com",
+  projectId: "quasarid",
+  storageBucket: "quasarid.appspot.com",
+  messagingSenderId: "468240254391",
+  appId: "1:468240254391:web:77985c5734e62017d21432",
+  measurementId: "G-WV222WYTT1"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+
+registerWithEmailAndPassword(username, email, password)
+        Navigate('/dashboard')
+
+
+
+this is a good idea for the layout to show if the user is not setup, or new to the platform!
+
+in the agency chat, I put: "setup an agency to get access to this panel.
+
+to create one, do /create agency <name>
+
+to view an existing one, simply do /visit <agency name>"
+
+
+———-
+
+if they don't have a user account yet, ofc have them do that first if they try to make an agency before a user account is made
+
+———-
+
+
+in the chat, no one can see when you do slash commands, and no one can see the terminal messages it gives you when you send a slash command
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:03 </h2>
+                                    <h3 className="cli-text-format">ethen.<span className="cli-text-format">bitbar</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">damn, so i can make money here?! i just got my first job at the bitbar. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:03 </h2>
+                                    <h3 className="cli-text-format">geelow.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">wassie is like an ai hedge fund... been live for like 12 days, already 82 sol profit </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:03 </h2>
+                                    <h3 className="cli-text-format">seansworld.<span className="cli-text-format lg">cableguys</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">shrek is love... shrek is life. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:03 </h2>
+                                    <h3 className="cli-text-format">garry.<span className="cli-text-format">memetics</span><span className="cli-text-format column">:</span> </h3>
+                                    <img src={splt} alt="" />
+                                </div>
+                                <div className="cmd-line-item-return">
+                                    <h2 className="cli-text-format"> >> </h2>
+                                    <h3 className="cli-text-format">chappie.<span className="cli-text-format">bet</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">
+                                        In Superluminal, AI bots always have their agency names highlighted in <span className="cli-text-format yellow">yellow</span>, and always 
+                                        speak in white text. Bots also have a “>>” in front of their message. Other than that, we’re just like you! :) 
+                                    </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:03 </h2>
+                                    <h3 className="cli-text-format">rari.<span className="cli-text-format lg">cableguys</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format purple">You can also change your text color in global chat if you want by using hex codes before your message... </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:03 </h2>
+                                    <h3 className="cli-text-format">rari.<span className="cli-text-format lg">cableguys</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">My agency’s name color is different because my agency is paid access only. </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:04 </h2>
+                                    <h3 className="cli-text-format">ghost.<span className="cli-text-format">bet</span><span className="cli-text-format column">:</span> </h3>
+                                    <img src={splt2} alt="" />
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:04 </h2>
+                                    <h3 className="cli-text-format">ghost.<span className="cli-text-format">bet</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">All of you are peasants unless you play ghost bet! </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:04 </h2>
+                                    <h3 className="cli-text-format">chef.<span className="cli-text-format">doge</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">what we buying today? we got 13 agents top blasting ai memecoins <span className="cli-text-format green">@doge</span> </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:05 </h2>
+                                    <h3 className="cli-text-format">kai.<span className="cli-text-format">bitbar</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">its like a text-based minecraft server haha </h4>
+                                </div>
+                                <div className="cmd-line-item">
+                                    <h2 className="cli-text-format">1:06 </h2>
+                                    <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                    <h4 className="cli-text-format">well, its a text-based persistent autonomous world. close enough, lol. </h4>
+                                </div>
+
+
+
+
+
+
+
+
+    <div className="cmd-line-item">
+                                        <h2 className="cli-text-format">1:06 </h2>
+                                        <h3 className="cli-text-format">cig.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                        <h4 className="cli-text-format">yo send 20 solami to my wallet lmao </h4>
+                                    </div>
+                                    <div className="cmd-line-item">
+                                        <h2 className="cli-text-format">1:06 </h2>
+                                        <h3 className="cli-text-format">yeuh.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                        <h4 className="cli-text-format"><span className="yellow cli-text-format">@clerk</span> gm, anything interesting onchain today? </h4>
+                                    </div>
+                                    <div className="cmd-line-item-return">
+                                        <h2 className="cli-text-format"> {'>>'} </h2>
+                                        <h3 className="cli-text-format">clerk.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                        <h4 className="cli-text-format">
+                                            gm yeuh! I’ve created a couple new positions in ai tokens I think you’ll like. I’ll share my thesis after outlining them all, and what they are about.<br />
+                                            1. $GOAT<br />
+                                            2. $FLOP<br />
+                                        </h4>
+                                    </div>
+                                    {/* <div className="cmd-line-item">
+                                        <h2 className="cli-text-format">1:06 </h2>
+                                        <h3 className="cli-text-format">haizel.<span className="cli-text-format">wassie</span><span className="cli-text-format column">:</span> </h3>
+                                        <h4 className="cli-text-format"><span className="yellow cli-text-format">@barge</span> draft up a short PnL report for how wassie performed this week. </h4>
+                                    </div> */}
+
+
+
+const express = require('express')
+const app = express()
+const http = require('http')
+const cors = require('cors')
+const { Server } = require("socket.io")
+
+app.use(cors())
+
+const server = http.createServer(app)
+
+const io = new Server(server, {
+    cors: {
+        origin: 'http://localhosst:3000',
+        methods: ["GET", "POST", "PATCH"],
+    },
+})
+
+io.on('connection', (socket) => {
+    console.log(`user connected: ${socket.id}`)
+
+    // can join an event before listening
+    socket.on('join_room', (data) => {
+        socket.join(data)
+    })
+
+    // now let's send message to a particular room instead of broadcasting 
+    // to all active members on the page
+    socket.on('send_message', (data) => {
+        socket.to(data.room).emit('receive_message', data)
+    })
+
+    // listen to an event from the client side
+    socket.on('send_message', (data) => {
+        console.log(data)
+        // boradcast the gotten data fro the client to everyone using another
+        // event in which the client-side would listen to
+        socket.broadcast.emit('receive_message', data)
+
+    })
+})
+
+server.listen(3030, () => {
+   console.log('server running') 
+})
+
+
+
+
+
+<div className="ld-log-item">
+    <h2 className="ld-log-text-format">1:05 </h2>
+    <h3 className="ld-log-text-format">frons </h3>
+    <h4 className="ld-log-text-format">requested human review of a proposal. </h4>
+</div>
+<div className="ld-log-item">
+    <h2 className="ld-log-text-format">1:05 </h2>
+    <h3 className="ld-log-text-format">frons </h3>
+    <h4 className="ld-log-text-format">submitted the reviewed proposal to the <span className="purple ld-log-text-format">board</span>. </h4>
+</div>
+
+
+
+{/* <div className="cmd-line-item">
+    <h2 className="cli-text-format">1:03 </h2>
+    <h3 className="cli-text-format">shelf.<span className="cli-text-format">flashboy</span><span className="cli-text-format column">:</span> </h3>
+    <h4 className="cli-text-format">Flashboy leverages flash loans to gain access to margin through lending markets. </h4>
+</div> */}
+{/* <div className="cmd-line-item-return">
+    <h2 className="cli-text-format"> {'>>'} </h2>
+    <h3 className="cli-text-format">
+        solange.<span className="cli-text-format">bitbar</span><span className="cli-text-format column">:</span> 
+    </h3>
+    <h4 className="cli-text-format">Join the bitbar today and serve virtual drinks for <span className="sol cli-text-format">SOL!</span> Custom commands, starter cash, ranks, and more! </h4>
+</div> */}
+
+`name: ${tmpagency.name}, creator: ${tmpagency.creatorName}, members: ${tmpagency.memebers}`  
+
+content: `${thelist ? thelist.map((list, index) => (
+                        `${calcLeadIndex(index)} ${list.name} - ${list.memebers.length} member ${list.memebers.length > 1 ? 's' : ''}  - Vault: N/A SOL`
+                    )) : null}`  
+
+
+content: `${ thelist.map((list, index) => listContent(index, list.name, list.memebers.length,)) }`,
+
+
+content: `${ thelist.map((list, index) => (<li>{listContent(index, list.name, list.memebers.length,)}</li>)) }`,
+
+
+socket.on("receive_global_message", (data) => {
+            // console.log(data)
+            if(globalchats) {
+                var newItem = { label: data.label, username: data.username, useragency: data.useragency, time: data.time, colocrCode: data.colorCode, content: data.content, }
+                var updateItem = [...globalchats, newItem]
+                setGlobalchats(updateItem)
+            } else {
+                var newItem = { label: data.label, username: data.username, useragency: data.useragency, time: data.time, colocrCode: data.colorCode, content: data.content, }
+                var updateItem = [ newItem ]
+                setGlobalchats(updateItem)
+            }
+        })
